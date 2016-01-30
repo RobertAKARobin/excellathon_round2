@@ -3,7 +3,12 @@ var app = express();
 var request = require("request");
 var bodyParser = require("body-parser");
 
-var env = require("./env.json");
+try{
+  var env = require("./env.json");
+}catch(e){
+  var env = process.env;
+}
+
 var stations;
 
 (function setStations(){
