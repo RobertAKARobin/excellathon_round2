@@ -35,8 +35,8 @@ app.post("/", function(req, res){
     api("jStationInfo", {StationCode: data.Entrances[0]["StationCode1"]}, function(dat){
       res.json({
         station: dat.Name,
-        stationLat: dat.Lat,
-        stationLong: dat.Lon
+        stationLat: dat.Lat.toFixed(6),
+        stationLong: dat.Lon.toFixed(6)
       })
     });
   }
