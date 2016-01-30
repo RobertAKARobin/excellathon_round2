@@ -23,7 +23,7 @@ app.get("/", function(req, res){
   res.json({success: true});
 });
 
-app.post("/nearby", function(req, res){
+app.post("/", function(req, res){
   var params = {
     Lat: (req.body.latitude || null),
     Lon: (req.body.longitude || null),
